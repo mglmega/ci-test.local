@@ -9,7 +9,7 @@ class Test extends BaseController
 {
     public function index()
     {
-        $categoryMod = model('CategoryMod');
+        // $categoryMod = model('CategoryMod');
 
         # insert 
         // $newCategory = new \App\Entities\Category();
@@ -56,7 +56,27 @@ class Test extends BaseController
         // echo '</pre>';
 
 
+        // echo '<br>';
+        // service('settings')->set('App.siteName', 'Mg CI4 testing official packeges');
+        // echo service('settings')->get('App.siteName');
+        $user = auth()->user();
+        // echo '<pre>';
+        // \var_dump($user);
+        // echo '</pre>';
+        echo $user->can('admin.access');
+
+
+
+
         echo '<br>';
         return 'here';
+    }
+
+
+    public function namechange($newName = '')
+    {
+        // die('mglmega');
+        service('settings')->set('App.siteName', $newName);
+        return \redirect()->to('/test');
     }
 }

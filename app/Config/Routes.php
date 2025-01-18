@@ -13,3 +13,7 @@ $routes->get('/', 'Home::index');
 // $routes->get('(:segment)', [Pages::class, 'view']);
 // $routes->get('test', [Test::class, 'index']);
 $routes->get('test', 'Test::index');
+$routes->get('namechange/(:any)', 'Test::namechange/$1');
+
+service('auth')->routes($routes);
+// service('auth')->routes($routes, ['except' => ['login', 'register']]);
