@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
+// use CodeIgniter\HTTP\ResponseInterface;
+use CodeIgniter\Shield\Entities\User;
 
 class Test extends BaseController
 {
@@ -59,13 +60,48 @@ class Test extends BaseController
         // echo '<br>';
         // service('settings')->set('App.siteName', 'Mg CI4 testing official packeges');
         // echo service('settings')->get('App.siteName');
-        $user = auth()->user();
+        // $user = auth()->user();
         // echo '<pre>';
         // \var_dump($user);
         // echo '</pre>';
-        echo $user->can('admin.access');
+
+        // $users = auth()->getProvider();
+        // $user = $users->findById(1);
+        // $user->addGroup('admin');
+        // // $user->syncPermissions('componenets.access', 'componenets.create', 'componenets.edit');
+        // \var_dump(
+        //     $user->getPermissions()
+        // );
+        // \var_dump($user->hasPermission('admin.access'));
+        // \var_dump(auth()->user()->can('admin.access'));
 
 
+        # new user
+        // $users = auth()->getProvider();
+
+        // $user = new User([
+        //     'username' => 'test2',
+        //     'email'    => 'test2',
+        //     'password' => 'test',
+        // ]);
+        // $users->save($user);
+
+        // $user = $users->findById($users->getInsertID());
+
+        // // Add to default group
+        // $users->addToDefaultGroup($user);
+
+
+
+        #ban
+        // $users = auth()->getProvider();
+        // $user = $users->findById(2);
+        // $user->addGroup('admin');
+        // $user->ban();
+        // $user->unBan();
+        // var_dump($user->hasPermission('admin.access'));
+
+        // \var_dump(auth()->user()->can('admin.access'));
 
 
         echo '<br>';

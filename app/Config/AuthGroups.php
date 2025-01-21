@@ -79,6 +79,11 @@ class AuthGroups extends ShieldAuthGroups
         'users.edit'          => 'Can edit existing non-admin users',
         'users.delete'        => 'Can delete existing non-admin users',
         'beta.access'         => 'Can access beta-level features',
+
+        'componenets.access'         => 'Can access beta-level features',
+        'componenets.create'         => 'Can access beta-level features',
+        'componenets.edit'         => 'Can access beta-level features',
+        'componenets.delete'         => 'Can access beta-level features',
     ];
 
     /**
@@ -96,7 +101,7 @@ class AuthGroups extends ShieldAuthGroups
             'beta.*',
         ],
         'admin' => [
-            'admin.access',
+            // 'admin.access',
             'users.create',
             'users.edit',
             'users.delete',
@@ -113,5 +118,11 @@ class AuthGroups extends ShieldAuthGroups
         'beta' => [
             'beta.access',
         ],
+        'mgtest' => [
+            'componenets.access',
+            'componenets.create',
+            'componenets.edit',
+            'componenets.delete',
+        ]
     ];
 }
